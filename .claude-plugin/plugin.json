@@ -1,7 +1,7 @@
 {
   "name": "liuxing-test-skills",
   "description": "AI skills plugin synced from GitLab to GitHub.",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "author": {
     "name": "liuxing95"
   },

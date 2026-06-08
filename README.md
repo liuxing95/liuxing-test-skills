@@ -8,8 +8,8 @@ build-artifact sync flow.
 - `.claude-plugin/` contains Claude-compatible plugin and marketplace metadata.
 - `skills/` contains public skill folders. Each skill should live in its own
   folder, for example `skills/skill-1/skill.md`.
-- `scripts/` contains version validation, artifact build, GitHub branch sync,
-  and pull request automation.
+- `scripts/` contains zx `.mjs` entrypoints for version validation, artifact
+  build, GitHub branch sync, and pull request automation.
 - `dist/github-sync/` is generated output only. It is the only content pushed to
   the GitHub mirror branch.
 
@@ -23,6 +23,10 @@ match it:
 - `.claude-plugin/marketplace.json`
 
 Use the version assertion script before build, publish, or mirror sync.
+For normal releases, commit a changeset with the feature change. GitLab CI
+consumes pending changesets after a merge commit lands on protected `release`,
+opens a `changeset-release/release` merge request back to `release`, and mirrors
+the built artifact to GitHub after that release merge request lands.
 
 ## Local Commands
 
@@ -32,6 +36,9 @@ pnpm run validate
 pnpm run build
 pnpm run prepare:github-sync
 ```
+
+`pnpm install` installs the local `zx` dev dependency used by all repository
+scripts.
 
 `pnpm run prepare:github-sync` writes `dist/github-sync/` and validates that the
 artifact only contains public allowlisted files.
