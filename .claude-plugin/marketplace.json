@@ -1,0 +1,29 @@
+{
+  "name": "liuxing-test-skills",
+  "owner": {
+    "name": "liuxing95"
+  },
+  "metadata": {
+    "description": "AI skills plugin synced from GitLab to GitHub."
+  },
+  "plugins": [
+    {
+      "name": "liuxing-test-skills",
+      "source": "./",
+      "description": "Public AI skills mirrored from GitLab build output.",
+      "version": "0.0.1",
+      "author": {
+        "name": "liuxing95"
+      },
+      "license": "MIT",
+      "homepage": "https://github.com/liuxing95/liuxing-test-skills",
+      "keywords": [
+        "ai",
+        "skills",
+        "plugin",
+        "gitlab",
+        "github-sync"
+      ]
+    }
+  ]
+}
