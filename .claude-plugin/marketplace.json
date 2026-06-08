@@ -11,7 +11,7 @@
       "name": "liuxing-test-skills",
       "source": "./",
       "description": "Public AI skills mirrored from GitLab build output.",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "author": {
         "name": "liuxing95"
       },

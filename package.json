@@ -1,6 +1,6 @@
 {
   "name": "skill-publish-test",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "AI skills plugin mirrored from GitLab to GitHub.",
   "author": {
     "name": "liuxing95"
@@ -23,7 +23,7 @@
     "sync:version": "node scripts/sync-version.mjs",
     "assert:github-sync": "node scripts/assert-github-sync-boundary.mjs",
     "changeset": "changeset",
-    "version-package": "changeset version && node scripts/assert-version-sync.mjs",
+    "version-package": "changeset version && node scripts/sync-version.mjs && node scripts/assert-version-sync.mjs",
     "release:publish": "node scripts/assert-version-sync.mjs && changeset publish"
   },
   "devDependencies": {

@@ -23,6 +23,10 @@ match it:
 - `.claude-plugin/marketplace.json`
 
 Use the version assertion script before build, publish, or mirror sync.
+For normal releases, commit a changeset with the feature change. GitLab CI
+consumes pending changesets after a merge commit lands on protected `release`,
+opens a `changeset-release/release` merge request back to `release`, and mirrors
+the built artifact to GitHub after that release merge request lands.
 
 ## Local Commands
 
