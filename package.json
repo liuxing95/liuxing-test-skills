@@ -1,6 +1,6 @@
 {
   "name": "skill-publish-test",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "AI skills plugin mirrored from GitLab to GitHub.",
   "author": {
     "name": "liuxing95"
@@ -16,18 +16,19 @@
   ],
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "validate": "node scripts/assert-version-sync.mjs && node --test tests/*.test.mjs",
-    "build": "node scripts/build-plugin.mjs",
-    "prepare:github-sync": "./scripts/prepare-github-sync.sh",
-    "assert:version": "node scripts/assert-version-sync.mjs",
-    "sync:version": "node scripts/sync-version.mjs",
-    "assert:github-sync": "node scripts/assert-github-sync-boundary.mjs",
+    "validate": "zx scripts/assert-version-sync.mjs && node --test tests/*.test.mjs",
+    "build": "zx scripts/build-plugin.mjs",
+    "prepare:github-sync": "zx scripts/prepare-github-sync.mjs",
+    "assert:version": "zx scripts/assert-version-sync.mjs",
+    "sync:version": "zx scripts/sync-version.mjs",
+    "assert:github-sync": "zx scripts/assert-github-sync-boundary.mjs",
     "changeset": "changeset",
-    "version-package": "changeset version && node scripts/assert-version-sync.mjs",
-    "release:publish": "node scripts/assert-version-sync.mjs && changeset publish"
+    "version-package": "changeset version && zx scripts/sync-version.mjs && zx scripts/assert-version-sync.mjs",
+    "release:publish": "zx scripts/assert-version-sync.mjs && changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.7"
+    "@changesets/cli": "^2.29.7",
+    "zx": "^8.8.5"
   },
   "files": [
     ".claude-plugin",
