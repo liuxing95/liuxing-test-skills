@@ -1,6 +1,6 @@
 {
   "name": "shopline-ai-toolkit",
-  "description": "A Claude Code plugin that provides SHOPLINE developer skills for building apps, working with Admin APIs, and integrating Storefront GraphQL.",
+  "description": "A Cursor plugin that provides SHOPLINE developer skills for building apps, working with Admin APIs, and integrating Storefront GraphQL.",
   "version": "1.0.0",
   "author": {
     "name": "shopline-developer"

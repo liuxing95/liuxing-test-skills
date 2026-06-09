@@ -1,19 +1,7 @@
 {
-  "name": "skill-publish-test",
-  "version": "0.0.4",
-  "description": "AI skills plugin mirrored from GitLab to GitHub.",
-  "author": {
-    "name": "liuxing95"
-  },
-  "license": "MIT",
-  "packageManager": "pnpm@10.33.0",
-  "keywords": [
-    "ai",
-    "skills",
-    "plugin",
-    "gitlab",
-    "github-sync"
-  ],
+  "name": "shopline-ai-toolkit-source",
+  "version": "1.0.0",
+  "description": "",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "validate": "zx scripts/assert-version-sync.mjs && node --test tests/*.test.mjs",
@@ -30,10 +18,15 @@
     "@changesets/cli": "^2.29.7",
     "zx": "^8.8.5"
   },
-  "files": [
-    ".claude-plugin",
+  "keywords": [
+    "shopline",
+    "ai",
     "skills",
-    "README.md",
-    "LICENSE"
-  ]
+    "plugin"
+  ],
+  "author": {
+    "name": "shopline-developer"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@10.33.0"
 }

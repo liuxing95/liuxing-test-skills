@@ -1,0 +1,32 @@
+{
+  "name": "shopline-ai-toolkit",
+  "description": "A Codex plugin that provides SHOPLINE developer skills for building apps, working with Admin APIs, and integrating Storefront GraphQL.",
+  "version": "1.0.0",
+  "author": {
+    "name": "shopline-developer"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "skills",
+    "plugin",
+    "shopline"
+  ],
+  "interface": {
+    "displayName": "SHOPLINE AI Toolkit",
+    "shortDescription": "SHOPLINE app and API development skills.",
+    "longDescription": "Provides SHOPLINE developer skills for building apps, working with Admin APIs, and integrating Storefront GraphQL.",
+    "developerName": "shopline-developer",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Help me build a SHOPLINE app.",
+      "Find the right SHOPLINE Admin API.",
+      "Validate a Storefront GraphQL query."
+    ],
+    "brandColor": "#0F6BFF"
+  }
+}
